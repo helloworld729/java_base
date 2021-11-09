@@ -19,3 +19,10 @@ https://git-scm.com/docs
 
 6. submit loc branch to remote
     git push origin loc_branch_name
+
+// pull
+7. git pull origin <remote_branch_name>
+
+8.
+git branch --set-upstream-to=origin/<remote_branch_name> <loc_branch_name>
+git pull

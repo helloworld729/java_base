@@ -17,5 +17,6 @@ public class EmployeeTest{
         empTwo.empDesignation("菜鸟程序员");
         empTwo.empSalary(500);
         empTwo.printEmployee();
+
     }
 }

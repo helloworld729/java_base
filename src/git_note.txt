@@ -1,0 +1,28 @@
+file:
+https://git-scm.com/docs
+
+
+1. create new loc branch
+    git branch you_branch_name
+
+2. change to loc branch
+    git checkout branch_name
+
+3. create and change to branch
+    git checkout -b your_branch_name
+
+4. delete loc branch
+    git branch -d branch_name
+
+5. del remote branch
+    git push --delete origin branch_name
+
+6. submit loc branch to remote
+    git push origin loc_branch_name
+
+// pull
+7. git pull origin <remote_branch_name>
+
+8.
+git branch --set-upstream-to=origin/<remote_branch_name> <loc_branch_name>
+git pull

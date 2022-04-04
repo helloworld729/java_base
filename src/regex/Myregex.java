@@ -2,7 +2,7 @@ package regex;
 
 import java.util.regex.*;
 
-class RegexExample1{
+class Myregex{
     public static void main(String[] args){
 //        String skuName = "今麦郎大今野老坛酸菜牛肉面新老包装随机 108g*24袋/箱";
         //今麦郎大今野老坛酸菜牛肉面新老包装随机108g*24袋

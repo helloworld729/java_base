@@ -1,7 +1,5 @@
 package p26_enum;
 
-import com.sun.org.apache.bcel.internal.generic.SWITCH;
-
 
 enum Color {
     RED, GREEN, BLUE;

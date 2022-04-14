@@ -2,14 +2,20 @@ package p11_string;
 
 public class MyString {
     public static void main(String[] args){
+        // 创建方法+相等判断
+        String s0 = "hello world";
         String s1 = "hello world";
         String s2 = new String("hello world");
+        String s3 = new String("hello world");
 
-        s1 = "redefinition";
-        System.out.println(s1);  // string 底层使用基于final修饰的char数组实现，s1这里是应用类型，可以指向不同的string
+        System.out.println(s0 == s1);
+        System.out.println(s2 == s3);
 
         System.out.println(s1.equals(s2));  // 比较内容
         System.out.println(s1 == s2);       // 比较内容和地址，和python中==不同，和python的is相同
+
+//        s1 = "redefinition";
+//        System.out.println(s1);  // string 底层使用基于final修饰的char数组实现，s1这里是引用类型，可以指向不同的string
 
         // 长度
         System.out.println(s1.length());

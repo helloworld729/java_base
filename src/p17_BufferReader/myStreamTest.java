@@ -1,34 +1,43 @@
 package p17_BufferReader;
 
 import java.io.*;
-
+// 目标：将一句话写入到文件中 并读取 输出到控制台
 
 public class myStreamTest{
-    // 加了throws 这里好像会屏蔽IO异常, 但是不加static没有运行标志
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException{
+
+        // 写文件
         // 文件对象
         File f = new File("knight.txt");
-        // 文件输出流对象
+        // 输出流对象
         FileOutputStream fop = new FileOutputStream(f, false);
-        // 文件输出writr对象 注意，这里的参数只能用双引号，否则会报错
+        // 输出流writer对象
         OutputStreamWriter os = new OutputStreamWriter(fop, "UTF-8");
 
-        os.append("Knight is learning java\n");
+        // 添加到缓冲区
+        os.append("knight is learning java\n");
         os.append("骑士在学习java语言\n");
-        os.close();  // 清空缓存，写入文件
-        fop.close(); // 释放资源
+        // 写入到文件中，并关闭writer对象
+        os.close();
+        // 关闭输出流对象，释放系统资源
+        fop.close();
 
-        // 文件输入流对象
+        // 读文件
         FileInputStream fin = new FileInputStream(f);
-        // 输入流reader对象
         InputStreamReader reader = new InputStreamReader(fin);
 
-        StringBuffer sb = new StringBuffer();
-        while (reader.ready()){
-            // 这里有加上 char 进行字符类型转换，否则会是数字
-            sb.append((char) reader.read()); // 逐个字符读入
-        }
+        StringBuffer sf = new StringBuffer();
 
-        System.out.println(sb.toString());
+        while (reader.ready()){
+            sf.append((char) reader.read());
+        }
+        reader.close();
+        fin.close();
+
+        // 输出
+        System.out.println(sf.toString());
+
+
     }
+
 }

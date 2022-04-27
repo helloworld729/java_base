@@ -1,4 +1,4 @@
-package p25_Interface;
+package p25_high_Interface;
 
 // 如果用public修饰，那么文件名要修改为接口名
 interface Sports{

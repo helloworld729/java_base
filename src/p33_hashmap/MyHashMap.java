@@ -15,6 +15,8 @@ public class MyHashMap {
         sites.forEach((key, value) -> {
             System.out.println(key +  ": " + value);
         });
+        System.out.println(sites.keySet());
+        System.out.println(sites.values());
 
         // 删
         System.out.println("\n");

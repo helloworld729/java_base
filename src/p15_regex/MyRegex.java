@@ -1,6 +1,6 @@
 package p15_regex;
 
-import sun.lwawt.macosx.CSystemTray;
+//import sun.lwawt.macosx.CSystemTray;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

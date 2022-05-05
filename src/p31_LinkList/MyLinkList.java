@@ -12,6 +12,7 @@ public class MyLinkList {
         sites.add("Taobao");
         sites.add("Weibo");
         System.out.println(sites+"\n");
+        sites.set(1, "hello");
 
         // 在头部增加、删除、查找比linklist更加高效
         System.out.println("## add element in first or last");

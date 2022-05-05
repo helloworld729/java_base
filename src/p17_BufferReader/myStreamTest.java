@@ -2,7 +2,9 @@ package p17_BufferReader;
 
 import java.io.*;
 // 目标：将一句话写入到文件中 并读取 输出到控制台
-// 字符流操作，可以逐行
+
+// 节点为字节流，处理为字符流
+
 public class myStreamTest{
     public static void main(String[] args) throws IOException{
 

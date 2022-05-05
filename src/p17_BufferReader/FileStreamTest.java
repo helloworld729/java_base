@@ -2,7 +2,7 @@ package p17_BufferReader;
 
 import java.io.*;
 
-// 字节流操作,需要用到size
+// 字节流操作1
 
 public class FileStreamTest {
     public static void main(String[] args) {

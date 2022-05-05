@@ -1,7 +1,8 @@
 package p17_BufferReader;
 
-
 import java.io.*;
+
+// 字符流操作 2
 
 public class SimpleMethod {
     public static void main(String[] args) throws IOException {
@@ -10,7 +11,6 @@ public class SimpleMethod {
         BufferedReader br = new BufferedReader(new FileReader(f));
         while (br.ready()){
             System.out.println(br.readLine());  // readLine返回一行字符串
-//            System.out.println(br.read()); // 返回字节码
         }
         br.close();
 

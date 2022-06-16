@@ -9,8 +9,9 @@ public abstract class MyAbstract {
         this.name = name;
         this.age = age;
         this.address = address;
-        // 这个this是继承类，而不是这个父类，所以不会调用这里的接口
-        System.out.println(this.toString());
+        // 实际表明这里的toString都是重写后的方法，为什么呢
+        System.out.println(1 + this.toString());
+        System.out.println(2 + toString());
     }
 
     public String getName() {
@@ -37,12 +38,12 @@ public abstract class MyAbstract {
         this.address = address;
     }
 
-//    @Override
-//    public String toString() {
-//        return "MyAbstract{" +
-//                "name='" + name + '\'' +
-//                ", age=" + age +
-//                ", address='" + address + '\'' +
-//                '}';
-//    }
+    @Override
+    public String toString() {
+        return "MyAbstract{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", address='" + address + '\'' +
+                '}';
+    }
 }

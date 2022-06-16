@@ -11,9 +11,27 @@ interface Football extends Sports{
     public void homeTeamScored(int points);
 }
 
+interface Music{
+    public void play(String name);
+}
+
+class KAICHANG implements Music{
+    public void play(String name){
+        System.out.println("播放开场音乐");
+    }
+}
 
 public class MySports implements Football {
-    // 类中必须要对方法进行实现，所以接口优点类似于c语言中的函数体在后面，但是前面要先声明一下。
+    private static KAICHANG kaichang = new KAICHANG();
+
+    public static void main(String[] args){
+        kaichang.play("hello");
+        MySports mysports = new MySports();
+        mysports.setHomeTeam("中国");
+        mysports.setVisitingTeam("越南");
+        mysports.homeTeamScored(3);
+    }
+
     public void setHomeTeam(String name){
         System.out.println("设置主队名称: " + name);
     }
@@ -24,13 +42,6 @@ public class MySports implements Football {
 
     public void homeTeamScored(int points){
         System.out.println("设置主队得分： " + points);
-    }
-
-    public static void main(String[] args){
-        MySports mysports = new MySports();
-        mysports.setHomeTeam("中国");
-        mysports.setVisitingTeam("越南");
-        mysports.homeTeamScored(3);
     }
 
 }

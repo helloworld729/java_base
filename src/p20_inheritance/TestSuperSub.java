@@ -18,19 +18,18 @@ class SuperClass{
 
 
 class SubClass extends SuperClass{
-    public int m, n;
+    public int m;
 
     SubClass(){
         System.out.println("子类无参构造" + "\n");
     }
 
     SubClass(int n){
-        super(300);
+        super(n);  // 调用构造方法
         System.out.println("子类有参构造，成员n被设置为："+n + "\n");
-        this.n = n;
     }
 
-    // 如果父类没有对应的构造函数，会默认调用无参构造函数
+    // 如果父类没有对应的构造函数[这里是说父类没有这种有两个形参的构造函数]，会默认调用无参构造函数
     SubClass(int m, int n){
         System.out.println("子类有参构造，成员n被设置为："+n + "  成员m被设置为: "+m + "\n");
         this.n = n;
@@ -44,7 +43,7 @@ class SubClass extends SuperClass{
     public void intro_test(){
         // 访问父类
         super.introduction();
-        // 访问子类
+        // 访问子类,在非静态方法中，可以用this代表本类
         this.introduction();
     }
 

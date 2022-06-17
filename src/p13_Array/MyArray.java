@@ -18,9 +18,11 @@ public class MyArray {
     public static void main(String[] args){
         MyArray nums2 = new MyArray();
         int [] nums3 = {1, 3, 5, 2, 6};
+        System.out.println(nums3.length);
 
         for(int k: nums2.mysort(nums3)){
             System.out.println(k);
         }
+
     }
 }

@@ -2,6 +2,17 @@ package p33_hashmap;
 
 import java.util.HashMap;
 
+/*
+* 增加：put
+* 删除：remove
+* 修改：replace
+* 查找：get
+* 判断key是否存在：containsKey
+* 判断value是否存在：containsValue
+* 长度：size
+* */
+
+
 public class MyHashMap {
     public static void main(String[] args){
         HashMap<Integer, String> sites = new HashMap<Integer, String>();
@@ -33,6 +44,11 @@ public class MyHashMap {
         //查
         System.out.println("\n");
         System.out.println("afer search 2");
-        System.out.println(sites.get(2));
+        if (sites.containsKey(2)){
+            System.out.println(sites.get(2));
+        }
+
+        // 长度
+        System.out.println("长度：" + sites.size());
     }
 }
